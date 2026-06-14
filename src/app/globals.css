@@ -4,7 +4,9 @@
 }
 
 @theme {
-  --whiteColor: #fff;
+  --color-primary: #304886;
+  --font-roboto: var(--font-roboto);
+  --font-montserrat: var(--font-montserrat);
 }
 
 body {
