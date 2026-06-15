@@ -5,6 +5,7 @@
 
 @theme {
   --color-primary: #304886;
+  --color-secondary: #c70b0b;
   --font-roboto: var(--font-roboto);
   --font-montserrat: var(--font-montserrat);
 }

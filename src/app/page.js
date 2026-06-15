@@ -2,8 +2,8 @@ import MediaCard from "@/components/media-card/MediaCard";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <MediaCard />
+    <div className="mt-10 flex min-h-screen flex-col items-center justify-between p-24">
+      <MediaCard mediaId={10} />
     </div>
   );
 }
