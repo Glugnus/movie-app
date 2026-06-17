@@ -5,13 +5,11 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "www.mamp.one",
-        pathname: "/wp-content/uploads/2024/09/**",
+        hostname: "www.themoviedb.org",
+        pathname: "/t/p/w500/**",
       },
     ],
   },
 };
-
-// https://www.mamp.one/wp-content/uploads/2024/09/image-resources2.jpg
 
 export default nextConfig;

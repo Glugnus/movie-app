@@ -1,9 +1,10 @@
 import MediaCard from "@/components/media-card/MediaCard";
+import Popular from "@/components/popular/Popular";
 
 export default function Home() {
   return (
-    <div className="mt-10 flex min-h-screen flex-col items-center justify-between p-24">
-      <MediaCard mediaId={10} />
+    <div className="mt-10 flex min-h-screen flex-col px-12 pt-2.5 pb-0">
+      <Popular />
     </div>
   );
 }
