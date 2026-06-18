@@ -7,7 +7,7 @@ export default async function Popular() {
 
   return (
     <div>
-      <h2>Les plus populaires</h2>
+      <h2 className="text-secondary font-bold text-3xl mt-10 font-montserrat">Les plus populaires</h2>
       <div className="flex gap-8">
         {popularMovies.map((movie) => (
           <MediaCard key={movie.id} media={movie} />
