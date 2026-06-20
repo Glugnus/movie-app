@@ -8,7 +8,7 @@ export default function MediaCard({ media }) {
         <div className="relative h-80 w-full">
           <Image
             className="rounded-xl"
-            src={`${process.env.TMDB_IMAGE_BASE_PATH}${media.poster_path}`}
+            src={`${process.env.NEXT_PUBLIC_TMDB_IMAGE_BASE_PATH}${media.poster_path}`}
             alt={media.title}
             fill
           />
