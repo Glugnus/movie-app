@@ -14,7 +14,7 @@ export default function MovieSearchResults({ movieResults }) {
               className="shadow-md"
               width={90}
               height={50}
-              src={`${process.env.NEXT_PUBLIC_TMDB_IMAGE_BASE_PATH}${movie.backdrop_path}`}
+              src={`${process.env.NEXT_PUBLIC_TMDB_IMAGE_BASE_PATH}/w500${movie.backdrop_path}`}
               alt={movie.title}
             />
             <p className="ml-2.5 text-xs font-medium">{movie.title}</p>
