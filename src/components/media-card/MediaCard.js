@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function MediaCard({ media }) {
   return (
-    <div className="font-montserrat mt-5 min-w-52 rounded-xl shadow-md">
+    <div className="font-montserrat mt-5 w-[200px] min-w-52 rounded-xl shadow-md">
       <Link href={`/movies/${media.id}`}>
         <div className="relative h-80 w-full">
           <Image
