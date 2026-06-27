@@ -2,7 +2,7 @@ import Image from "next/image";
 import MovieCredits from "../movie-credits/MovieCredits";
 import { Suspense } from "react";
 
-export default function MovieDetails({ movie }) {
+export default function MovieDetails({ movie, locale }) {
   return (
     <div className="relative min-h-[60vh] w-full">
       <div className="absolute top-0 left-0 z-10 h-full w-full after:absolute after:top-0 after:left-0 after:z-20 after:h-full after:w-full after:bg-[#041226]/60">
@@ -42,7 +42,7 @@ export default function MovieDetails({ movie }) {
           </p>
           <div className="mt-auto">
             <Suspense fallback={<p>Chargement...</p>}>
-              <MovieCredits movieId={movie.id} />
+              <MovieCredits movieId={movie.id} locale={locale} />
             </Suspense>
           </div>
         </div>

@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function MediaCard({ media }) {
+export default function MediaCard({ media, locale }) {
   return (
     <div className="font-montserrat mt-5 w-[200px] min-w-52 rounded-xl shadow-md">
-      <Link href={`/movies/${media.id}`}>
+      <Link href={`/${locale}/movies/${media.id}`}>
         <div className="relative h-80 w-full">
           <Image
             className="rounded-xl"

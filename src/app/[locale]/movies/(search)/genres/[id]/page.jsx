@@ -8,6 +8,7 @@ export default async function GenreId({ params, searchParams }) {
     <SearchResults
       searchParams={resolvedSearchParams}
       genreId={resolvedParams.id}
+      locale={resolvedParams.locale}
     />
   );
 }

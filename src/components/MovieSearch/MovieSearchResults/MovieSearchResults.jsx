@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function MovieSearchResults({ movieResults }) {
+export default function MovieSearchResults({ movieResults, locale }) {
   return (
     <div className="font-montserrat absolute top-11 z-20 bg-white p-2.5 shadow-md">
       {movieResults.map((movie) => (
         <div key={movie.id}>
           <Link
-            href={`/movies/${movie.id}`}
+            href={`/${locale}/movies/${movie.id}`}
             className="hover:text-secondary flex items-center border-b border-solid border-gray-400 py-2.5 text-black"
           >
             <Image

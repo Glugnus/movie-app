@@ -4,11 +4,12 @@ import Popular from "@/components/popular/Popular";
 
 export const revalidate = 86400;
 
-export default function Home() {
+export default async function Home({ params }) {
+  const { locale } = await params;
   return (
     <div className="mt-10 flex min-h-screen flex-col px-12 pt-2.5 pb-0">
-      <Popular />
-      <Genres />
+      <Popular locale={locale} />
+      <Genres locale={locale} />
     </div>
   );
 }

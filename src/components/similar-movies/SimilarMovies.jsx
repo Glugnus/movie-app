@@ -1,13 +1,13 @@
 import { getMovieByPath } from "@/utils/movieClient";
 import MediaCard from "../media-card/MediaCard";
 
-export default async function SimilarMovies({ movieId }) {
-  const { results } = await getMovieByPath(`/movie/${movieId}/similar`);
+export default async function SimilarMovies({ movieId, locale }) {
+  const { results } = await getMovieByPath(`/movie/${movieId}/similar`, [], locale);
   return (
     <div className="flex justify-center">
       <div className="mt-8 mb-12 flex gap-5">
         {results.slice(0, 6).map((movie) => (
-          <MediaCard media={movie} key={movie.id} />
+          <MediaCard media={movie} key={movie.id} locale={locale} />
         ))}
       </div>
     </div>

@@ -2,12 +2,14 @@
 
 import { useEffect, useState } from "react";
 import { useDebounce } from "use-debounce";
+import { useParams } from "next/navigation";
 import MovieSearchResults from "./MovieSearchResults/MovieSearchResults";
 
 export default function MovieSearch() {
   const [movieResults, setMovieResults] = useState([]);
   const [searchText, setSearchText] = useState("");
   const [hasFocus, setHasFocus] = useState(false);
+  const { locale } = useParams();
 
   const [debouncedSearchText] = useDebounce(searchText, 500);
 
@@ -19,13 +21,13 @@ export default function MovieSearch() {
       }
 
       const response = await fetch(
-        `/api/movies/search?query=${debouncedSearchText}`,
+        `/api/movies/search?query=${debouncedSearchText}&locale=${locale}`,
       );
       const { results } = await response.json();
       setMovieResults(results.filter((movie) => movie.backdrop_path));
     };
     updateMovieSearch();
-  }, [debouncedSearchText]);
+  }, [debouncedSearchText, locale]);
 
   return (
     <div className="relative">
@@ -38,7 +40,7 @@ export default function MovieSearch() {
         onFocus={() => setHasFocus(true)}
       />
       {movieResults.length > 0 && hasFocus && (
-        <MovieSearchResults movieResults={movieResults} />
+        <MovieSearchResults movieResults={movieResults} locale={locale} />
       )}
     </div>
   );
