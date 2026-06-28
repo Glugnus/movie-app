@@ -21,11 +21,16 @@ export default function Header({ locale }) {
             <li>
               <Link href={`/${locale}/movies`}>Films</Link>
             </li>
+            <li>
+              <Link href={`/${locale}/signup`}>Inscription</Link>
+            </li>
           </ul>
         </nav>
         <MovieSearch />
         <div className="flex items-center">
-          <FontAwesomeIcon icon={faUser} />
+          <Link href={`/${locale}/user/profile`}>
+            <FontAwesomeIcon icon={faUser} />
+          </Link>
         </div>
         <LanguageSelector />
       </div>
