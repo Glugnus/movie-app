@@ -1,11 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import Like from "./like/Like";
 
 export default function MediaCard({ media, locale }) {
   return (
     <div className="font-montserrat mt-5 w-[200px] min-w-52 rounded-xl shadow-md">
       <Link href={`/${locale}/movies/${media.id}`}>
         <div className="relative h-80 w-full">
+          <Like mediaId={media.id} />
           <Image
             className="rounded-xl"
             src={`${process.env.NEXT_PUBLIC_TMDB_IMAGE_BASE_PATH}/w500${media.poster_path}`}
